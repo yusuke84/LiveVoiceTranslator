@@ -111,7 +111,7 @@ function speechStart(){
             var result = event.results[i];
             if(result.isFinal && langselecter.transfrom != langselecter.transto){
                 $.ajaxSetup({ async: false });
-                $.ajax(TRANSLATORUR,{text: result[0].transcript,from: langselecter.transfrom,to: langselecter.transto},
+                $.getJSON(TRANSLATORUR,{text: result[0].transcript,from: langselecter.transfrom,to: langselecter.transto},
                     function(json){
                         sendMesg(JSON.stringify($(json.translation).text()));
                     }

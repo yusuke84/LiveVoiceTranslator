@@ -113,7 +113,7 @@ function speechStart(){
                 $.ajaxSetup({ async: false });
                 $.getJSON(TRANSLATORUR,{text: result[0].transcript,from: langselecter.transfrom,to: langselecter.transto},
                     function(json){
-                        sendMesg(JSON.stringify(json.transcript);
+                        sendMesg(JSON.stringify(json.transcript));
                     }
                 );
             }else if(result.isFinal && langselecter.transfrom == langselecter.transto){

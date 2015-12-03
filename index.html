@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta charset="utf-8" />
+
+    <title>Live Voice Translator</title>
+
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="https://skyway.io/dist/0.3/peer.js"></script>
+    <script src="js/main.js" type="text/javascript"></script>
+
+</head>
+<body>
+<div id="wrap">
+    <header class="headerheaderContena">
+            <div id="titleContent">Live Voice Translator</div>
+    </header>
+    <footer class="footerContena">
+        <form>
+            <select class="medium" id="userlist"></select>
+            <select class="medium" id="langselecter">
+                <option value="en-US">I'm english speaker</option>
+                <option value="ja-JP">私は日本語話者です</option>
+            </select>
+            <button type="submit" class="" id="regist">Start</button>
+            <button type="submit" class="" id="exit" disabled>Exit</button>
+        </form>
+    </footer>
+</div>
+<video id="remoteVideo" autoplay></video>
+<p id="myTelop" class="telopPlane"></p>
+<div class="myVideContena"><video id="myVideo" autoplay muted="true"></video></div>
+<div class="" id="mic"></div>
+
+
+</body>
+</html>

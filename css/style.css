@@ -1,0 +1,182 @@
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #000000;
+}
+
+#wrap {
+    width: 100%;
+    position: relative;
+    min-height: 100%;
+}
+
+.headerContena {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    z-index: 4;
+}
+
+.footerContena {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 4;
+}
+
+#titleContent {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-top: 10px;
+    width: 100%;
+    font-size: 40px;
+    text-align: center;
+    color: white;
+    text-shadow: 0 -2px #000000, 2px -2px #000000, 2px 0 #000000, 2px 2px #000000, 0 2px #000000, -2px 2px #000000, -2px 0 #000000, -2px -2px #000000;
+    font-family:'Lucida Grande', Meiryo, sans-serif;
+    letter-spacing: 6px;
+    z-index: 5;
+}
+
+input[type=text]{
+    border-radius: 5px;
+    border:#a9a9a9 1px solid;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2),0 0 2px rgba(0,0,0,0.3);
+    width:200px;
+    height:30px;
+    padding:0 3px;
+    font-size: 15px;
+}
+
+input[type=text]:focus {
+    border:solid 1px #20b2aa;
+}
+
+input[type=text], select {
+    outline: none;
+}
+
+select{
+    border-radius: 5px;
+    border:#a9a9a9 1px solid;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2),0 0 2px rgba(0,0,0,0.3);
+    height:30px;
+    padding:0 3px;
+    font-size: 20px;
+}
+
+select:focus {
+    border:solid 1px #20b2aa;
+}
+
+select {
+    outline: none;
+}
+#userlist {
+    min-width: 100px;
+}
+
+button {
+    font-size: 1.4em;
+    font-weight: bold;
+    padding: 10px 30px;
+    color: #fff;
+    border-style: none;
+    text-shadow: 1px 1px 2px #000;
+    background: -webkit-gradient(linear, left bottom, left top, from(#36d), color-stop(0.5, #248), to(#36d));
+    border-radius: 5px;
+}
+
+button:hover {
+    /* 透明度を20%に指定 */
+    opacity: 0.8;
+}
+
+.myVideContena{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    bottom: 100px;
+    right: 20px;
+    border-radius: 100px;
+    z-index: 2;
+    overflow: hidden;
+}
+
+#myVideo {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: -50px;
+    left: -50px;
+}
+
+#remoteVideo {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+ .telopPlane {
+    font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+    background-color:rgba(255,255,255,0.65);
+    color: #000;
+    font-size:200%;
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    z-index: 3;
+
+}
+
+.bgBlue{
+    background-color:rgba(0,102,255,0.65);
+}
+
+#mic {
+    position: absolute;
+    width: 75px;
+    height: 80px;
+    bottom: 310px;
+    right: 86px;
+    background-color: #5200FF;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMzMiIGlkPSJzdmctc291cmNlIiB2ZXJzaW9uPSIxLjEiDQp4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciDQp4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgc3R5bGU9InBvc2l0aW9uOiBhYnNvbHV0ZSI+DQo8ZyBpZD0ibWljcm9waG9uZSIgZGF0YS1pY29ubWVsb249IlNpbXBsZSBMaW5lIEljb25zOjVlOWI5MzRmNWY0Y2MzYTk2YjBhOWVmZmEwOWVlMjQ3Ij4NCjxnPg0KPHBhdGggIGQ9Ik0xNS45NzcsMjEuNTU3YzIuNTc2LDAsNC42NzItMi4wOTYsNC42NzItNC42NzZWNC42N2MwLTIuNTc1LTIuMDk2LTQuNjctNC42NzItNC42Nw0KYy0yLjU3NSwwLTQuNjc0LDIuMDk1LTQuNjc0LDQuNjd2MTIuMjExQzExLjMwMywxOS40NjEsMTMuNDAxLDIxLjU1NywxNS45NzcsMjEuNTU3eiBNMTIuNTE2LDQuNjdjMC0xLjkwNiwxLjU1Ni0zLjQ2LDMuNDYxLTMuNDYNCmMxLjkwOSwwLDMuNDYzLDEuNTU0LDMuNDYzLDMuNDZ2MTIuMjExYzAsMS45MS0xLjU1NCwzLjQ2NS0zLjQ2MywzLjQ2NWMtMS45MDUsMC0zLjQ2MS0xLjU1NS0zLjQ2MS0zLjQ2NVY0LjY3eiI+PC9wYXRoPg0KPHBhdGggIGQ9Ik0yMi4wODEsMTIuMjExYy0wLjMzOCwwLTAuNjA2LDAuMjcxLTAuNjA2LDAuNjA0djQuMDUxYzAsMy4wMTktMi40NTQsNS40NzYtNS40NzIsNS40NzYNCmMtMy4wMjEsMC01LjQ3OC0yLjQ1Ny01LjQ3OC01LjQ3NnYtNC4wNTFjMC0wLjMzNC0wLjI3MS0wLjYwNC0wLjYwNC0wLjYwNGMtMC4zMzQsMC0wLjYwOSwwLjI3MS0wLjYwOSwwLjYwNHY0LjA1MQ0KYzAsMy40NjksMi42NjgsNi4yOTksNi4wNTUsNi42MjN2Ny4zMDFoLTMuNDEyYy0wLjMzMiwwLTAuNjA2LDAuMjcxLTAuNjA2LDAuNjA0YzAsMC4zMzQsMC4yNzQsMC42MDUsMC42MDYsMC42MDVoOC4wOQ0KYzAuMzMyLDAsMC42MDQtMC4yNzEsMC42MDQtMC42MDVjMC0wLjMzMy0wLjI3MS0wLjYwNC0wLjYwNC0wLjYwNGgtMy40Njd2LTcuMjk2YzMuNDEyLTAuMjk4LDYuMTA5LTMuMTM5LDYuMTA5LTYuNjI4di00LjA1MQ0KQzIyLjY4OCwxMi40ODEsMjIuNDEzLDEyLjIxMSwyMi4wODEsMTIuMjExeiI+PC9wYXRoPg0KPC9nPg0KPC9nPg0KPGZpbHRlciBpZD0nY29sb3Itc2hhZG93LTInIGRhdGEtaWNvbm1lbG9uPSdmaWx0ZXI6ZDhiMzI0MzIyMmYxMTNjZDBkZDM1N2YwYWFlZDJlZTknIGNvbG9yLWludGVycG9sYXRpb24tZmlsdGVycz0ic1JHQiI+DQo8ZmVDb21wb25lbnRUcmFuc2ZlciBpbj0iU291cmNlR3JhcGhpYyI+DQo8ZmVGdW5jUiB0eXBlPSJkaXNjcmV0ZSIgdGFibGVWYWx1ZXM9IjEiLz4NCjxmZUZ1bmNHIHR5cGU9ImRpc2NyZXRlIiB0YWJsZVZhbHVlcz0iMC4yMzkyMTU2ODYiLz4NCjxmZUZ1bmNCIHR5cGU9ImRpc2NyZXRlIiB0YWJsZVZhbHVlcz0iMC40OTgwMzkyMTYiLz4NCjwvZmVDb21wb25lbnRUcmFuc2Zlcj4NCjxmZUdhdXNzaWFuQmx1ciBzdGREZXZpYXRpb249IjEiLz4NCjxmZU9mZnNldCBkeD0iMSIgZHk9IjEiIHJlc3VsdD0ic2hhZG93Ii8+DQo8ZmVDb21wb3NpdGUgaW49IlNvdXJjZUdyYXBoaWMiIGluMj0ic2hhZG93IiBvcGVyYXRvcj0ib3ZlciIvPg0KPC9maWx0ZXI+DQo8L3N2Zz4=);
+    background-size: contain;
+    border-radius: 60px;
+    box-shadow: 2px 2px 30px #027AFD;
+    z-index: 4;
+}
+
+#mic:hover{
+    background-color: #5200FF;
+    box-shadow: 2px 2px 50px #027AFD;
+}
+
+#mic:active{
+    background-color:#FF0000;
+    box-shadow: 2px 2px 50px #FF6161;
+}
+
+.displayblock{
+    display: block;
+}
+
+.displaynone{
+    display: none;
+}

@@ -12,7 +12,7 @@ $access_token = getAccessToken("livevoice2015","ckNKRGVxbrWP463XBYSQbmtcpkikRn6K
 
 $text = Translator($access_token, array('text' => $text_to_translate,'to' => $to, 'from' => $from));
 
-$array_data = array(translation=>$text);
+$array_data = array(transcript=>$text);
 
 //ヘッダーの設定
 header('Content-type:application/json; charset=utf8');

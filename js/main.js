@@ -109,7 +109,7 @@ function speechStart(){
     recognition.onresult = function(event) {
         for(var i=event.resultIndex; i<event.results.length; i++){
             var result = event.results[i];
-            /**if(result.isFinal && langselecter.transfrom != langselecter.transto){
+            if(result.isFinal && langselecter.transfrom != langselecter.transto){
                 $.getJSON(TRANSLATORUR,{text: result[0].transcript,from: langselecter.transfrom,to: langselecter.transto},
                     function(json){
                         sendMesg(JSON.stringify($(json.translation).text()));
@@ -117,7 +117,7 @@ function speechStart(){
                 );
             }else if(result.isFinal && langselecter.transfrom == langselecter.transto){
                 sendMesg(JSON.stringify(result[0].transcript));
-            }*/
+            }
             recognitionBuffer = {
                 isFinal: result.isFinal,
                 resultText: result[0].transcript
@@ -345,8 +345,6 @@ $(document).ready(function(){
                     finishVideoChat();
                 });
 
-                clearInterval(timer);
-
                 flag = {status: 'started'};
                 changeUI();
 
@@ -375,7 +373,6 @@ $(document).ready(function(){
 
             peer.on('close', function () {
                 speechStop();
-                deleteClient();
                 finishVideoChat();
 
             });
@@ -383,7 +380,6 @@ $(document).ready(function(){
             peer.on('error', function (err) {
                 console.log(err.message);
                 speechStop();
-                deleteClient();
                 finishVideoChat();
             });
 
@@ -417,14 +413,12 @@ $(document).ready(function(){
 
             callhandl.on('close', function(){
                 speechStop();
-                deleteClient();
                 finishVideoChat();
             });
 
             callhandl.on('error', function(){
                 console.log(err.message);
                 speechStop();
-                deleteClient();
                 finishVideoChat();
             });
 
@@ -437,7 +431,6 @@ $(document).ready(function(){
     //終了ボタン
     $('#exit').on('click',function(e){
         $('#mic').addClass('displaynone');
-        deleteClient();
         finishVideoChat();
         clearInterval(timer);
 

@@ -110,7 +110,8 @@ function speechStart(){
         for(var i=event.resultIndex; i<event.results.length; i++){
             var result = event.results[i];
             if(result.isFinal && langselecter.transfrom != langselecter.transto){
-                $.getJSON(TRANSLATORUR,{text: result[0].transcript,from: langselecter.transfrom,to: langselecter.transto},
+                $.ajaxSetup({ async: false });
+                $.ajax(TRANSLATORUR,{text: result[0].transcript,from: langselecter.transfrom,to: langselecter.transto},
                     function(json){
                         sendMesg(JSON.stringify($(json.translation).text()));
                     }

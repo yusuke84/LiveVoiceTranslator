@@ -11,7 +11,14 @@ $from = $_REQUEST['from'];
 $access_token = getAccessToken("livevoice2015","ckNKRGVxbrWP463XBYSQbmtcpkikRn6KOpTmnNBMnJY=")->access_token;
 
 $text = Translator($access_token, array('text' => $text_to_translate,'to' => $to, 'from' => $from));
-echo $text;
+
+$array_data = array(translation=>$text);
+
+//ヘッダーの設定
+header('Content-type:application/json; charset=utf8');
+//渡すデータ（配列）をJSON形式にデコードして出力
+echo json_encode($array_data);
+
 
 /* access_token さえ取れればいい */
 function getAccessToken($client_id, $client_secret, $grant_type = "client_credentials", $scope = "http://api.microsofttranslator.com"){
